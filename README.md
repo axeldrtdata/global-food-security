@@ -26,8 +26,8 @@ When I came back to this project for my portfolio, I checked what the data cover
 
 - **Units.** The food balance sheets are in thousands of tonnes: multiplied by 1,000, they are in tonnes, not kilograms. The first version understated losses and Thailand's cassava exports by a factor of 1,000.
 - **Joins.** Three countries had different names from one file to another (United Kingdom, Czechia, Eswatini) and were silently dropped. With the names harmonised, the world's food could feed 8.8 billion people instead of 8.7.
-- **Missing estimates.** 116 countries, home to more than 3.3 billion people, have no undernourishment estimate, including the Democratic Republic of the Congo, Yemen, Somalia, South Sudan and Syria. The 535.7 million is a floor.
-- **Food aid.** Six of the ten largest aid recipients have no undernourishment estimate. Among the 48 recipients that do, aid follows the number of undernourished people (Spearman ρ = 0.54, p < 0.001) but not their share (ρ = 0.25, not significant). The −82% drop in recorded aid between 2013 and 2016 comes mostly from countries that stop reporting (72 in 2013, 26 in 2016); on the same 25 countries, aid fell by about half.
+- **Missing estimates.** 96 countries, home to more than 3.3 billion people, have no undernourishment estimate, including the Democratic Republic of the Congo, Yemen, Somalia, South Sudan and Syria. The 535.7 million is a floor.
+- **Food aid.** Six of the ten largest aid recipients have no undernourishment estimate. Among the 49 recipients that do, aid follows the number of undernourished people (Spearman ρ = 0.55, p < 0.001) but not their share (ρ = 0.28, not significant at the 5% level). The −82% drop in recorded aid between 2013 and 2016 comes mostly from countries that stop reporting (72 in 2013, 26 in 2016); on the same 25 countries, aid fell by about half.
 
 ## Repository structure
 
