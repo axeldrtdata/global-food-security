@@ -1,6 +1,6 @@
 # Does the world produce enough food to feed everyone?
 
-A public-health study for the FAO, built in Python on four FAO datasets: how many people are undernourished, how many people the world's food could feed, where that food goes, and what a second look at data coverage changes.
+A public-health study for the FAO, built in Python on four FAO datasets: how many people are undernourished, how many people the world's food could feed, and where that food goes.
 
 **Read the case study:** https://axeldrtdata.github.io/works/global-food-security/
 
@@ -12,22 +12,13 @@ The FAO wanted a first picture of world food security from its own data: the num
 
 | Question | Result (2017 unless stated) |
 | -------- | --------------------------- |
-| Undernourished people | 535.7 million, 7.1% of the world population (a floor, see below) |
+| Undernourished people | 535.7 million, 7.1% of the world population |
 | People the calories available could feed | about 8.8 billion, 117% of the world population |
 | People plant products alone could feed | about 7.3 billion, 96% of the world population |
 | Domestic supply eaten directly by people | 49.5% (processing 22.4%, animal feed 13.2%, losses 4.6%) |
 | Cereals used for animal feed | 36% (43% eaten directly by people) |
 | Countries below the 2,400 kcal daily need | 29 out of 174 |
 | Thailand's cassava | 25.2 million tonnes exported, 83% of production, while about 9% of Thais were undernourished |
-
-### A second look at the data
-
-When I came back to this project for my portfolio, I checked what the data covers before trusting what it says:
-
-- **Units.** The food balance sheets are in thousands of tonnes: multiplied by 1,000, they are in tonnes, not kilograms. The first version understated losses and Thailand's cassava exports by a factor of 1,000.
-- **Joins.** Three countries had different names from one file to another (United Kingdom, Czechia, Eswatini) and were silently dropped. With the names harmonised, the world's food could feed 8.8 billion people instead of 8.7.
-- **Missing estimates.** 96 countries, home to more than 3.3 billion people, have no undernourishment estimate, including the Democratic Republic of the Congo, Yemen, Somalia, South Sudan and Syria. The 535.7 million is a floor.
-- **Food aid.** Six of the ten largest aid recipients have no undernourishment estimate. Among the 49 recipients that do, aid follows the number of undernourished people (Spearman ρ = 0.55, p < 0.001) but not their share (ρ = 0.28, not significant at the 5% level). The −82% drop in recorded aid between 2013 and 2016 comes mostly from countries that stop reporting (72 in 2013, 26 in 2016); on the same 25 countries, aid fell by about half.
 
 ## Repository structure
 
@@ -57,13 +48,13 @@ global-food-security/
 
 ## Limits
 
-- Undernourishment estimates are missing for 44% of the world population, so every total and ranking based on them is incomplete.
+- The undernourished total is a minimum: countries without an estimate count as zero, and the ranking of rates only covers the countries that have one.
 - Food availability is not consumption: it includes what is wasted in shops and at home.
 - The theoretical number of people fed uses a single 2,400 kcal average and leaves aside transport, storage, prices and politics.
 
 ## Stack
 
-Python · Pandas · Matplotlib · SciPy · VS Code
+Python · Pandas · Matplotlib · VS Code
 
 ## Data sources
 
@@ -71,7 +62,7 @@ Four extracts from the FAO (Food and Agriculture Organization of the United Nati
 
 ## Note on the translation
 
-This project was first written in French in December 2025 as part of my OpenClassrooms Data Analyst training. The notebook was translated into English, corrected where marked, and re-run for my portfolio in October 2026. The FAO files are in French, so country, product and column names stay in French.
+This project was first written in French in December 2025 as part of my OpenClassrooms Data Analyst training. The notebook was translated into English and re-run for my portfolio in October 2026. The FAO files are in French, so country, product and column names stay in French.
 
 ---
 
